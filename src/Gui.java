@@ -9,6 +9,7 @@ public class Gui extends Frame {
     public Buffer b = new Buffer();
     public Customer c;
     public Shopkeeper s;
+    Color mint = new Color(230, 245, 230);
 
     public Gui() {
         super ("Producer Consumer");
@@ -25,24 +26,24 @@ public class Gui extends Frame {
 
         buttonCustomer = new Button("Create Costumer");
         buttonCustomer.setFont(new Font ("TimesRoman", Font.PLAIN, 14));
-        buttonCustomer.setBounds(new Rectangle (20, 50, 120, 27));
-        buttonCustomer.setBackground(Color.WHITE);
-        buttonCustomer.setForeground(Color.black);
+        buttonCustomer.setBounds(new Rectangle (85, 70, 130, 27));
+        buttonCustomer.setBackground(this.mint);
+        buttonCustomer.setForeground(Color.BLACK);
         this.add(buttonCustomer);
         buttonCustomer.addActionListener(new ButtonCostumerHandler(this));
 
         buttonShopkeeper = new Button("Create Shopkeeper");
         buttonShopkeeper.setFont(new Font ("TimesRoman", Font.PLAIN, 14));
-        buttonShopkeeper.setBounds(new Rectangle (20, 100, 120, 27));
-        buttonShopkeeper.setBackground(Color.WHITE);
+        buttonShopkeeper.setBounds(new Rectangle (85, 120, 130, 27));
+        buttonShopkeeper.setBackground(this.mint);
         buttonShopkeeper.setForeground(Color.black);
         this.add(buttonShopkeeper);
         buttonShopkeeper.addActionListener(new ButtonShopKeeperHandler(this));
 
         buttonClickAway = new Button("Start Click Away");
         buttonClickAway.setFont(new Font ("TimesRoman", Font.PLAIN, 14));
-        buttonClickAway.setBounds(new Rectangle (20, 150, 120, 27));
-        buttonClickAway.setBackground(Color.WHITE);
+        buttonClickAway.setBounds(new Rectangle (85, 170, 130, 27));
+        buttonClickAway.setBackground(this.mint);
         buttonClickAway.setForeground(Color.black);
         this.add(buttonClickAway);
         buttonClickAway.addActionListener(new ButtonClickAwayHandler(this));

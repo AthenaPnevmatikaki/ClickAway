@@ -1,5 +1,5 @@
 class Customer extends Thread {
-    private Buffer b;
+    private final Buffer b;
     public int counter = 0;
 
     public Customer (Buffer b) {

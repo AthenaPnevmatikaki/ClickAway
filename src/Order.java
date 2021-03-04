@@ -1,6 +1,6 @@
 public class Order {
     private static int id = 0;
-    private String productCode;
+    private final String productCode;
 
     public Order(String productCode) {
         this.productCode = productCode;

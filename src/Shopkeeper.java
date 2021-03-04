@@ -1,5 +1,5 @@
 public class Shopkeeper extends Thread {
-    private Buffer b;
+    private final Buffer b;
     public int counter = 0;
 
     public Shopkeeper (Buffer b) {

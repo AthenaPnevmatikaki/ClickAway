@@ -9,7 +9,8 @@ public class Gui extends Frame {
     public Buffer b = new Buffer();
     public Customer c;
     public Shopkeeper s;
-    Color mint = new Color(230, 245, 230);
+    Color mint = new Color(170, 234, 170);
+    Color reddish = new Color(220, 109, 93);
 
     public Gui() {
         super ("Producer Consumer");
@@ -24,7 +25,7 @@ public class Gui extends Frame {
         this.setLayout(null);
         this.addWindowListener(new CloseWindowAndExit());
 
-        buttonCustomer = new Button("Create Costumer");
+        buttonCustomer = new Button("Create Customer");
         buttonCustomer.setFont(new Font ("TimesRoman", Font.PLAIN, 14));
         buttonCustomer.setBounds(new Rectangle (85, 70, 130, 27));
         buttonCustomer.setBackground(this.mint);
@@ -43,10 +44,11 @@ public class Gui extends Frame {
         buttonClickAway = new Button("Start Click Away");
         buttonClickAway.setFont(new Font ("TimesRoman", Font.PLAIN, 14));
         buttonClickAway.setBounds(new Rectangle (85, 170, 130, 27));
-        buttonClickAway.setBackground(this.mint);
+        buttonClickAway.setBackground(this.reddish);
         buttonClickAway.setForeground(Color.black);
         this.add(buttonClickAway);
         buttonClickAway.addActionListener(new ButtonClickAwayHandler(this));
+        buttonClickAway.setEnabled(false);
     }
 }
 

@@ -11,5 +11,6 @@ public class ButtonShopKeeperHandler implements ActionListener {
     public void actionPerformed(ActionEvent pushingButton0) {
         System.out.println("button shopkeeper pressed");
         gui.s = new Shopkeeper(gui.b);
+        gui.buttonClickAway.setEnabled(true);
     }
 }
